@@ -8,7 +8,8 @@ public class PlaceHolderTest {
 
 	@Test
 	public void testGetName() {
-		fail("Not yet implemented");
+		PlaceHolder holder = new PlaceHolder();
+		assertEquals(holder.getName(), "Hello, World");
 	}
 
 }
