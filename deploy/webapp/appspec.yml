@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /testapp.war
+    destination: /opt/apache_tomcat/webapps/
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_tomcat.sh
+      timeout: 60
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/start_tomcat.sh
+      timeout: 60
+      runas: ec2-user
